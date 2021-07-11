@@ -24,4 +24,5 @@ class NER(Abstract):
 
         e = dict(zip(d, c))
         res = "Nouns:" + str(a) + " , Verbs:" + str(b) + " , Entities:" + str(e)
-        return res
+        result = {"Prediction": res}
+        return result

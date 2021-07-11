@@ -28,8 +28,10 @@ class Classifier(Abstract):
         my_prediction = clf.predict(vect)
 
         if my_prediction == 1:
-            return "It is a SPAM"
+            res = "SPAM"
         elif my_prediction == 0:
-            return "It is a HAM"
+            res = "HAM"
         else:
-            return "There was a mistake parsing your request, retry please"
+            res = "There was a mistake parsing your request, retry please"
+        result = {"Prediction": res}
+        return result
